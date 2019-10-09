@@ -13,7 +13,6 @@ import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
 
 import com.app.key.EncryptUtils;
-import com.app.log.LogUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -190,9 +189,6 @@ public final class AppUtils {
         ShellUtils.CommandResult result = ShellUtils.execCmd("echo root", true);
         if (result.result == 0) {
             return true;
-        }
-        if (result.errorMsg != null) {
-            LogUtils.d("isAppRoot", result.errorMsg);
         }
         return false;
     }

@@ -5,7 +5,6 @@ import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowInsets;
 
-import com.app.log.LogUtils;
 
 
 /**
@@ -37,9 +36,6 @@ public class KeyBordStateUtils {
 			windowBottom = ints[1];
 		}
 		WindowInsets rootWindowInsets = mDecorView.getRootWindowInsets();
-		if (rootWindowInsets != null) {
-			LogUtils.e("noah",rootWindowInsets.getSystemWindowInsetBottom());
-		}
 		boolean mIsKeyboardShow = windowBottom < ints[1];
 		if (mIsKeyboardShow) {
 			int keyboard_height = Math.abs(ints[1] - windowBottom);//键盘高度
